@@ -37,6 +37,8 @@ Remember to put your name as the new simulation developer.
 9. Exam Summary - what you answer so far. Show all the questions and mark them as blank (B), review (answer and (R)) and answered (shows the answer)
 10. Your alias used in the exam simulation
 
+Final results will be at the `results` folder.
+
 ### <a name="Questions">Questions Details</a>
 
 You detail the questions inside an array. Each value in the array is a question.
