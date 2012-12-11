@@ -17,7 +17,7 @@ Then configure your Server to point to the folder and use it!
 
 ### Simple Doc
 
-![Documentation Image](https://github.com/mlalbuquerque/SZES/raw/master/doc.png)
+![Documentation Image](https://raw.github.com/mlalbuquerque/SZES/master/web/images/doc.png)
 
 1. Question number
 2. Question example codes
@@ -59,7 +59,7 @@ The example below (inside `controllers/questions.php` file) displays a **choice 
 
 and returns the following construction:
 
-![Question example](https://github.com/mlalbuquerque/SZES/raw/master/question-choice.png)
+![Question example](https://raw.github.com/mlalbuquerque/SZES/master/web/images/question-choice.png)
 
 The example below (inside `controllers/questions.php` file) displays a **multiple choice question**:
 
@@ -75,7 +75,7 @@ The example below (inside `controllers/questions.php` file) displays a **multipl
 
 and returns the following construction:
 
-![Question example](https://github.com/mlalbuquerque/SZES/raw/master/question-multiple-choice.png)
+![Question example](https://raw.github.com/mlalbuquerque/SZES/master/web/images/question-multiple-choice.png)
 
 The example below (inside `controllers/questions.php` file) displays a **direct question**:
 
@@ -89,7 +89,7 @@ The example below (inside `controllers/questions.php` file) displays a **direct 
 
 and returns the following construction:
 
-![Question example](https://github.com/mlalbuquerque/SZES/raw/master/question-direct.png)
+![Question example](https://raw.github.com/mlalbuquerque/SZES/master/web/images/question-direct.png)
 
 ### <a name="Codes">Example Codes</a>
 
