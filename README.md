@@ -18,7 +18,12 @@ Then configure your Server to point to the folder and use it!
 ### Contributions
 
 You can increase the number of questions in the `controllers/questions.php` file.
-Or put new questions files at the `simulations` folder.
+Or put new questions files at the `simulations` folder. This files must have the format:
+
+    questions-<github user>-YYYYMMDD.php
+
+Se the example in the package!
+
 Then just change a file in the `simulations` folder for the file `controller/questions.php`.
 Remember to put your name as the new simulation developer.
 
