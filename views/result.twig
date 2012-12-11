@@ -1,0 +1,14 @@
+{% extends "layout.twig" %}
+
+{% block css %}
+{{ parent() }}
+{% endblock %}
+
+{% block content %}
+<p style="text-align: center;">
+    <img src="/images/LogoPHPConf7anos.gif" />
+</p>
+<h1 style="text-align: center;">{{ name }}</h1>
+<h3 style="text-align: center;">Your final result</h3>
+<h3 style="text-align: center;">{{ result }} corrects questions out of {{ total }} questions</h3>
+{% endblock %}

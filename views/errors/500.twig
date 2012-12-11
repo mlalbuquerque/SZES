@@ -1,0 +1,9 @@
+{% extends "layout.twig" %}
+
+{% block css %}
+{{parent()}}
+{% endblock %}
+{% block content %}
+<img class="error" src="/images/blue-screen.jpg" />
+<h1 class="error">Erro no Servidor</h1>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "layout.twig" %}
+
+{% block css %}
+{{parent()}}
+{% endblock %}
+{% block content %}
+<img class="error" src="/images/forbidden.png" />
+<h1 class="error">Acesso N&atilde;o Autorizado</h1>
+{% endblock %}

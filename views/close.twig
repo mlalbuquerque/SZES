@@ -1,0 +1,23 @@
+{% extends "layout.twig" %}
+
+{% block css %}
+{{ parent() }}
+<link href="/css/close.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<div id="close">
+    <img src="/images/LogoPHPConf7anos.gif" />
+    <h1>Prepare to close Exam</h1>
+    <h3>Your responses ({{ app.session.get('user').name }})</h3>
+    {{ summary | raw }}
+    {% if has_blank or has_review %}
+    <p>
+        It seems you have blank questions and/or questions to review!
+        What do you want to do?
+    </p>
+    <button onclick="window.location.href='/'">Go back</button>
+    {% endif %}
+    <button onclick="window.location.href='/exam/result'">See result</button>
+</div>
+{% endblock %}

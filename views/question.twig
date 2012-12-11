@@ -1,0 +1,67 @@
+{% extends "layout.twig" %}
+{% block css %}
+<link href="/css/questions.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block js %}
+<script src="/js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        $('#summary').bind('click', function () {
+            $('#summary-window').slideToggle("fast", function () {
+                var image = $('#summary').css('background-image');
+                
+                if (image.match(/icon_dropdown_hover/g) != null)
+                    $('#summary').css('background-image', 'url(/images/icon_dropup_hover.png)');
+                else
+                    $('#summary').css('background-image', 'url(/images/icon_dropdown_hover.png)');
+            });
+        });
+    });
+</script>
+{% endblock %}
+
+{% block content %}
+<div id="header">
+    <img class="left-float" src="/images/LogoPHPConf7anos.gif" />
+    <h1 class="left-float">Question {{ question_number }}</h1>
+    <span id="summary" class="right-float">Exam Summary</span>
+    <span class="right-float">{{ app.session.get('user').name }}</span>
+    <button id="close-button" type="button" onclick="window.location.href='/close/exam'">Close Exam</button>
+    <br style="clear: both;" />
+</div>
+<div id="question">
+    {{ question.text }}
+</div>
+{% if question.hasCode %}
+<div id="code" class="left-float">
+    <pre>{{ question.code | raw }}</pre>
+</div>
+{% endif %}
+<div id="answer" class="left-float">
+    <form action="/" method="post">
+        <input type="hidden" name="question_number" value="{{ number }}" />
+        {% if question.isMultiple() %}
+        <input type="hidden" name="multiple" value="1" />
+        {% else %}
+        <input type="hidden" name="multiple" value="0" />
+        {% endif %}
+        {{ question.html() | raw }}
+        <input type="submit" name="action" value="Answer" />
+        <input type="submit" name="action" value="Review" />
+    </form>
+    <div style="clear: both;">
+        {% if number > 0 %}
+        <button type="button" onclick="window.location.href='/{{ (number-1) }}'">Previous</button>
+        {% endif %}
+        {% if (number+1) < total_questions %}
+        <button type="button" onclick="window.location.href='/{{ (number+1) }}';">Next</button>
+        {% endif %}
+    </div>
+</div>
+<!-- SUMMARY -->
+<div id="summary-window">
+    {{ summary | raw }}
+    <div id="legend">(B) - Blank&nbsp;&nbsp;&nbsp;&nbsp;(R) - Review</div>
+</div>
+{% endblock %}

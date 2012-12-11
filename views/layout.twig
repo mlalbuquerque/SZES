@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Simulado Não-oficial ZCE</title>
+        {% block css %}
+        <link href="/css/main.css" rel="stylesheet" type="text/css" />
+        {% endblock %}
+    </head>
+    <body>
+        <div id="content">
+            {% block content %}{% endblock %}
+            {% block footer %}{% endblock %}
+        </div>
+        {% block js %}{% endblock %}
+    </body>
+</html>

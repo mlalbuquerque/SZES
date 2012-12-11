@@ -1,0 +1,48 @@
+body {
+    color: #116295;
+    font-family: Verdana, sans-serif;
+}
+
+table {
+    background-color: black;
+    margin: 0 auto;
+    width: 50%;
+}
+
+tr {
+    background-color: white;
+}
+
+td, th {
+    padding: 4px;
+}
+
+h1.error {
+    color: #116295;
+    font-family: Verdana, sans-serif;
+    font-size: 80px;
+    font-variant: small-caps;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 0 3px 3px black;
+}
+
+img.error {
+    display: block;
+    margin: 100px auto 0 auto;
+}
+
+div.error {
+    background-color: rgba(255, 0, 0, 0.3);
+    border: 2px solid red;
+    border-radius: 5px;
+    color: red;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-variant: small-caps;
+    font-weight: bold;
+    margin: 0 auto 20px auto;
+    padding: 6px 0;
+    text-align: center;
+    width: 400px;
+}

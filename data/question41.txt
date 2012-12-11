@@ -1,0 +1,16 @@
+$grades = array(
+    'John' => '8',
+    'Mike' => '7',
+    'Mary' => '10',
+    'Joan' => '9'
+);
+
+$amount = count($grades);
+$average = 0;
+$callback = function ($grade) use ($amount, _______) {
+    $average += $grade/$amount;
+};
+
+array_walk($grades, $callback);
+
+echo $average;

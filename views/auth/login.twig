@@ -1,0 +1,19 @@
+{% extends "layout.twig" %}
+{% block content %}
+<div id="login" style="text-align: center;">
+    <img src="/images/LogoPHPConf7anos.gif" />
+    <h1 >ZCE - Zend Certified Engineer</h1>
+    <h3>Prova simulada não-oficial para ZCE</h3>
+    <div>
+        {% if error is not empty %}
+        <div class="error">{{error}}</div>
+        {% endif %}
+        <form action="/authenticate" method="post">
+            <label for="user">Participante</label>
+            <input type="text" name="user" />
+            <input type="hidden" name="profile" value="attendee" />
+            <button type="submit">Iniciar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,125 @@
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    border-bottom: 2px solid #cdcdcd;
+}
+
+.left-float {
+    float: left;
+}
+
+.right-float {
+    float: right;
+}
+
+#header img {
+    margin: 10px 30px 10px 10px;
+}
+
+#header h1 {
+    color: #116295;
+    font-size: 45px;
+    position: relative;
+        top: 35px;
+}
+
+#header span {
+    margin: 10px 30px 20px 0;
+}
+
+#close-button {
+    position: absolute;
+    right: 10px;
+    top: 100px;
+}
+
+#summary {
+    background-image: url(/images/icon_dropdown_hover.png);
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    color: #116295;
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+#summary:hover {
+    text-decoration: underline;
+}
+
+#summary-window {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: none;
+    font-size: 14px;
+    height: 480px;
+    padding: 0 10px 5px 35px;
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    width: 600px;
+}
+
+#summary-window ul {
+    list-style-type: decimal-leading-zero;
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 10px;
+    column-count: 3;
+    column-gap: 10px;
+}
+
+#summary-window ol li {
+    margin-bottom: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#legend {
+    position: absolute;
+    bottom: 5px;
+}
+
+#question {
+    clear: both;
+    margin: 20px 0 0 20px;
+}
+
+#answer {
+    margin: 20px 0 0 50px;
+}
+
+#code {
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 20px 0 0 20px;
+    padding: 2px 20px;
+}
+
+#code pre {
+    font-family: Courier, serif;
+}
+
+input, label {
+    cursor: pointer;
+    float: left;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+label + input {
+    clear: both;
+}
+
+label {
+    position: relative;
+    top: -5px;
+}
