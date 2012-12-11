@@ -15,6 +15,13 @@ Download the package and run the following commands in the folder you unzipped i
 It will download the packages that is missing.
 Then configure your Server to point to the folder and use it!
 
+### Contributions
+
+You can increase the number of questions in the `controllers/questions.php` file.
+Or put new questions files at the `simulations` folder.
+Then just change a file in the `simulations` folder for the file `controller/questions.php`.
+Remember to put your name as the new simulation developer.
+
 ### Simple Doc
 
 ![Documentation Image](https://raw.github.com/mlalbuquerque/SZES/master/web/images/doc.png)

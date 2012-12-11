@@ -1,4 +1,6 @@
 <?php
+// Original simulation with two more questions!
+// By Marcio Albuquerque - 2012
 
 return array(
     array( // 0
@@ -427,5 +429,22 @@ return array(
             'Use functions such as "strip_tags()" on input taken from one user and displayed to another',
             'Use the "filtering()" function to filter data coming from the user'
         )
+    ),
+    array( // 40
+        'text'    => 'What the code below will return?',
+        'answer'  => 3,
+        'options' => array(
+            'It will print "0, 1, 2, 3, 4, 5, 6, 7, 8, 9"',
+            'It will print "9, 8, 7, 6, 5, 4, 3, 2, 1, 0"',
+            'It will return a Fatal Error because we can\'t use $direction inside the closure',
+            'It will print "5, 6, 2, 4, 9, 0, 7, 1, 3, 8" - no changes!',
+            'It will return Notices and it will print the array without an order'
+        ),
+        'code'    => true
+    ),
+    array( // 41
+        'text'    => 'What would you put in the blank spot to print out "8.5" - the grades average?',
+        'answer'  => '&$average',
+        'code'    => true
     ),
 );
