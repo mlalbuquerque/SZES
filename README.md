@@ -44,7 +44,7 @@ Remember to put your name as the new simulation developer.
 
 Final results will be at the `results` folder. The files are named after the user alias and grade.
 Example: if the alias is `John Doe` and he got a score of `9`, the file will be named `John_Doe-9`.
-And the content of the file is similar to the example below:
+And the file content is similar to the example below:
 
     You've got 9 correct answers out of 10 questions!
 
