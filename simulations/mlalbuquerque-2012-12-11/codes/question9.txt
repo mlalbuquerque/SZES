@@ -1,0 +1,34 @@
+$string = "Hello, World!";
+$a = ?;
+$b = ?;
+$c = ?;
+
+if($a)
+{
+    if($b && !$c)
+    {
+        echo "Goodbye Cruel World!";
+    }
+    else if(!$b && !$c)
+    {
+        echo "Nothing here";
+    }
+}
+else
+{
+    if(!$b)
+    {
+        if(!$a && (!$b && $c))
+        {
+            echo "Hello, World!";
+        }
+        else
+        {
+            echo "Goodbye World!";
+        }
+    }
+    else
+    {
+        echo "Not quite.";
+    }
+}

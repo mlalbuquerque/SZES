@@ -18,14 +18,18 @@ Then configure your Server to point to the folder and use it!
 ### Contributions
 
 You can increase the number of questions in the `controllers/questions.php` file.
-Or put new questions files at the `simulations` folder. This files must have the format:
+OR - and this is better - you can create new entire simulation exams!
 
-    questions-<github user>-YYYYMMDD.php
+To create new simulation exams, create a new folder in `simulations` folder with this format:
+
+    <github user>-YYYY-MM-DD
+    
+Inside this folder, put a PHP file named `questions.php` that contains the questions (see [questions details](#Questions)) and a folder named `codes` with the questions example codes.
 
 See the example in the package!
 
-Then just change a file in the `simulations` folder for the file `controller/questions.php`.
-Remember to put your name as the new simulation developer.
+So, if you want to make another simulation, just change the file `controller/questions.php` for another one in the `simulations` folder (with the respectives example codes).
+Remember to put your name in the questions file as the new simulation developer.
 
 ### Simple Doc
 

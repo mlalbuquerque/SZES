@@ -1,0 +1,13 @@
+$a = array(
+    'red'    => 10,
+    'blue'   => 'abc',
+    'green',
+    'purple' => array(
+        'bye'   => 'OK'
+        'hello' => array(
+            5 => 'Wrong',
+            8 => 'Wrong again',
+            'correct'
+        )
+    )
+);
