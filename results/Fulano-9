@@ -1,0 +1,59 @@
+Here you will see your result!
+
+The file name has the user name and his result.
+
+Inside this file will have an summary of his responses and the right answers.
+
+Content example
+====================================
+
+You've got 9 correct answers out of 10 questions!
+
+YOUR ANSWERS
+===========================
+array (
+  'Answer' => 
+  array (
+    0 => '2',
+    1 => '1',
+    2 => '2',
+    3 => 
+    array (
+      0 => '1',
+      1 => '2',
+    ),
+    4 => '0',
+    5 => '3',
+    6 => 'b',
+    7 => '3',
+    8 => '0',
+    9 => '3',
+  ),
+  'Review' => 
+  array (
+  ),
+  'Blank' => 
+  array (
+  ),
+)
+===========================
+
+RIGHT ANSWERS
+===========================
+array (
+  0 => 1,
+  1 => 1,
+  2 => 2,
+  3 => 
+  array (
+    0 => 1,
+    1 => 2,
+  ),
+  4 => 0,
+  5 => 3,
+  6 => 'b',
+  7 => 3,
+  8 => 0,
+  9 => 3,
+)
+===========================

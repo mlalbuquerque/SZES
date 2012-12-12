@@ -22,7 +22,7 @@ Or put new questions files at the `simulations` folder. This files must have the
 
     questions-<github user>-YYYYMMDD.php
 
-Se the example in the package!
+See the example in the package!
 
 Then just change a file in the `simulations` folder for the file `controller/questions.php`.
 Remember to put your name as the new simulation developer.
@@ -42,7 +42,60 @@ Remember to put your name as the new simulation developer.
 9. Exam Summary - what you answer so far. Show all the questions and mark them as blank (B), review (answer and (R)) and answered (shows the answer)
 10. Your alias used in the exam simulation
 
-Final results will be at the `results` folder.
+Final results will be at the `results` folder. The files are named after the user alias and grade.
+Example: if the alias is `John Doe` and he got a score of `9`, the file will be named `John_Doe-9`.
+And the content of the file is similar to the example below:
+
+    You've got 9 correct answers out of 10 questions!
+
+    YOUR ANSWERS
+    ===========================
+    array (
+      'Answer' => 
+      array (
+        0 => '2',
+        1 => '1',
+        2 => '2',
+        3 => 
+        array (
+          0 => '1',
+          1 => '2',
+        ),
+        4 => '0',
+        5 => '3',
+        6 => 'b',
+        7 => '3',
+        8 => '0',
+        9 => '3',
+      ),
+      'Review' => 
+      array (
+      ),
+      'Blank' => 
+      array (
+      ),
+    )
+    ===========================
+
+    RIGHT ANSWERS
+    ===========================
+    array (
+      0 => 1,
+      1 => 1,
+      2 => 2,
+      3 => 
+      array (
+        0 => 1,
+        1 => 2,
+      ),
+      4 => 0,
+      5 => 3,
+      6 => 'b',
+      7 => 3,
+      8 => 0,
+      9 => 3,
+    )
+    ===========================
 
 ### <a name="Questions">Questions Details</a>
 
