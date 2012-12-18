@@ -33,7 +33,7 @@ Remember to put your name in the questions file as the new simulation developer.
 
 ### Simple Doc
 
-![Documentation Image](https://raw.github.com/mlalbuquerque/SZES/master/web/images/doc.png)
+<img src="https://raw.github.com/mlalbuquerque/SZES/master/web/images/doc.png" border="1" alt="Documentation" />
 
 1. Question number
 2. Question example codes
@@ -130,7 +130,7 @@ The example below (inside `controllers/questions.php` file) displays a **choice 
 
 and returns the following construction:
 
-![Question example](https://raw.github.com/mlalbuquerque/SZES/master/web/images/question-choice.png)
+<img src="https://raw.github.com/mlalbuquerque/SZES/master/web/images/question-choice.png" border="1" alt="Choice question example" />
 
 The example below (inside `controllers/questions.php` file) displays a **multiple choice question**:
 
@@ -146,7 +146,7 @@ The example below (inside `controllers/questions.php` file) displays a **multipl
 
 and returns the following construction:
 
-![Question example](https://raw.github.com/mlalbuquerque/SZES/master/web/images/question-multiple-choice.png)
+<img src="https://raw.github.com/mlalbuquerque/SZES/master/web/images/question-multiple-choice.png" border="1" alt="Multiple Choice Question example" />
 
 The example below (inside `controllers/questions.php` file) displays a **direct question**:
 
@@ -160,7 +160,7 @@ The example below (inside `controllers/questions.php` file) displays a **direct 
 
 and returns the following construction:
 
-![Question example](https://raw.github.com/mlalbuquerque/SZES/master/web/images/question-direct.png)
+<img src="https://raw.github.com/mlalbuquerque/SZES/master/web/images/question-direct.png" border="1" alt="Direct Question example" />
 
 ### <a name="Codes">Example Codes</a>
 
