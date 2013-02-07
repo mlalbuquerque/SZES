@@ -73,20 +73,3 @@ return array(
 		'code' => false
 	)
 );
-
-I started to write a simulation and I'm using your pattern proposal (folder  simulations/cloudson-date1). But any questions use source php, that needs is in folder data. 
-But I dont want delete the current files into this folder.  
-
-I think that we need other structure to be loaded by system. 
-Any porpouses: 
-
-1) Create bundles like 
-./simulations/cloudson-date1/sources/ 
-./simulations/cloudson-date1/questions.php 
-
-I like this idea, because in file ./controller/questions.php we could set the bundle "master" that would used. 
-
-
-2) Only create a folder into data like 
-./data/cloudson-date1/ 
-./data/mlalbuquerque-date1/  
