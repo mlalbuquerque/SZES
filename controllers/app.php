@@ -48,6 +48,10 @@ $app['auth.login'] = $app->share(function ($app) {
 $app['auth.permission'] = $app->share(function ($app) {
     return new Auth\Authorization($app['session']);
 });
+
+$configLoader = require_once __ROOT__.'/config/loader.php';
+$simulation = new Util\Simulation($configLoader);
+
 //$app['dao'] = $app->share(function ($app) {
 //    return new Model\DAO\Engine\DaoLoader($app['db']);
 //});
@@ -58,8 +62,6 @@ $app['auth.permission'] = $app->share(function ($app) {
 // Iniciando a sessão
 $app->register(new Silex\Provider\SessionServiceProvider());
 $app['session']->start();
-
-$questions = include 'questions.php';
 
 // Registrando o Logger de SQL apenas para debug
 //if ($app['debug'])
@@ -92,7 +94,9 @@ $app->get('/login', function() use ($app) {
     ));
 })->bind('auth.login');
 
-$app->post('/authenticate', function (Request $request) use ($app, $questions) {
+$app->post('/authenticate', function (Request $request) use ($app, $simulation) {
+    // carrega as questoes da simulação que foi configurada 
+    $questions = $simulation->getQuestions();
     // Modifique o método getUser() em lib/Auth/Authentication.php
     $user_name = $request->get('user');
 
@@ -132,13 +136,15 @@ $app->get('/logout', function () use ($app) {
 
 // ------ HOMEPAGE --------------------
 // Showing the question
-$app->get('/{number}', function (Request $request, $number) use ($app, $questions) {
+$app->get('/{number}', function (Request $request, $number) use ($app, $simulation) {
+    $questions = $simulation->getQuestions();
+
     if ($number < 0) return $app->redirect('/');
     if ($number >= count($questions)) return $app->redirect('/' . (int)($number-1));
 
     $user = $app['session']->get('user');
     $summary = $app['session']->get($user . '-summary');
-    $question = new Util\Question($number, $questions[$number], $summary);
+    $question = $simulation->getQuestion($number, $summary);
 
     return $app['twig']->render('question.twig', array(
         'number'          => $number,
@@ -150,11 +156,11 @@ $app->get('/{number}', function (Request $request, $number) use ($app, $question
 })->value('number', 0)->bind('question.show');
 
 // Saving the questions summary
-$app->post('/', function (Request $request) use ($app, $questions) {
+$app->post('/', function (Request $request) use ($app, $simulation) {
     $number = $request->get('question_number');
     $action = $request->get('action');
     $answer = $request->get('answer');
-    $total_questions = count($questions);
+    $total_questions = count($simulation->getQuestions());
     
     Util\Summary::saveSession($app['session'], $number, $answer, $action);
     
@@ -165,21 +171,22 @@ $app->post('/', function (Request $request) use ($app, $questions) {
 })->bind('question.action');
 
 // Close the exam. Shows all your answers
-$app->get('/close/exam', function () use ($app, $questions) {
+$app->get('/close/exam', function () use ($app, $simulation) {
     $user = $app['session']->get('user');
     $summary = $app['session']->get($user . '-summary');
 
     return $app['twig']->render('close.twig', array(
-        'summary'    => Util\Summary::html(count($questions), $summary),
+        'summary'    => Util\Summary::html(count($simulation->getQuestions()), $summary),
         'has_blank'  => Util\Summary::hasBlank($summary),
         'has_review' => Util\Summary::hasReview($summary)
     ));
 })->bind('exam.close');
 
 // Shows your result
-$app->get('/exam/result', function () use ($app, $questions) {
+$app->get('/exam/result', function () use ($app, $simulation) {
     $user = $app['session']->get('user');
     $name = $user->name;
+    $questions = $simulation->getQuestions();
     if (!$user) $app->redirect('/');
     $summary = $app['session']->get($user . '-summary');
 

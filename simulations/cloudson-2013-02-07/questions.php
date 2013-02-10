@@ -8,10 +8,10 @@ return array(
 		'text'    => 'Which of the following best describes E_WARNING among PHP Error Types ? ',
         'answer'  => 1,
         'options' => array(
-            'Fatal error that occurs at script runtime'
-			'Nonfatal error that occurs at runtime (for example, if the script is unable to connect to MySQL)'
-			'Error that occurs at compile time due to invalid syntax'
-			'None of the above' 
+            'Fatal error that occurs at script runtime',
+			'Nonfatal error that occurs at runtime (for example, if the script is unable to connect to MySQL)',
+			'Error that occurs at compile time due to invalid syntax',
+			'None of the above' ,
         ),
         'code'    => false
 	),
@@ -28,8 +28,8 @@ return array(
         'code'    => false
 	),
 	array(
-		'text'  => 'The -q option on the PHP command line used to denote'
-		'answer' => 1
+		'text'  => 'The -q option on the PHP command line used to denote',
+		'answer' => 1,
 		'options' => array(
 			'Don\'t output any HTML headers automatically' ,
 			'Don\'t echo back any user inputs ',
@@ -47,7 +47,7 @@ return array(
 			'$aVar',
 			'${"myVar"}',
 			'&$something'
-		)
+		),
 		'code' => false
 	),
 	array(
@@ -58,7 +58,7 @@ return array(
 			'',
 			'',
 			'',
-		)
+		),
 		'code' => true
 	),
 	array(
@@ -69,7 +69,7 @@ return array(
 			'',
 			'',
 			'',
-		)
+		),
 		'code' => false
 	)
 );
