@@ -50,7 +50,7 @@ return array(
 		),
 		'code' => false
 	),
-	array(
+	/*array(
 		'text' => 'What is the output of the following script? ',
 		'answer' => 1,
 		'options' => array(
@@ -71,5 +71,5 @@ return array(
 			'',
 		),
 		'code' => false
-	)
+	)*/
 );

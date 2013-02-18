@@ -51,7 +51,7 @@ $app['auth.permission'] = $app->share(function ($app) {
 
 $configLoader = require_once __ROOT__.'/config/loader.php';
 $simulation = new Util\Simulation($configLoader);
-
+$app['simulation_name'] = (string)$simulation;
 //$app['dao'] = $app->share(function ($app) {
 //    return new Model\DAO\Engine\DaoLoader($app['db']);
 //});
