@@ -1,3 +1,0 @@
-$array = array ('a1', 'a3', 'a5', 'a10', 'a20');
-natsort ($array);
-var_dump ($array);

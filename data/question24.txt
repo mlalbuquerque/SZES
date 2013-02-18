@@ -1,7 +1,0 @@
-$a = 12;
-switch($a)
-{
-    default: echo 'YEAH'; break;
-    case 12: echo 'TWELVE'; break;
-    case 10: echo 'TEN'; break;
-}

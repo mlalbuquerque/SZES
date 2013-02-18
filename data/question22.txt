@@ -1,9 +1,0 @@
-&lt;form action="index.php" method="post"&gt;
-&lt;input type="text" name="element[]"&gt;
-&lt;input type="text" name="element[]"&gt;
-&lt;/form&gt;
-
-// index.php
-&lt;?php
-echo $_GET['element'];
-?&gt;
