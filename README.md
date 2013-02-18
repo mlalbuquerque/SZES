@@ -32,9 +32,9 @@ See the example in the package!
 As you saw, questions will stay on folder `simulations`. You can choice which test do. Only write in the file config/loader.php the folder name, see below: 
 
 ```php
-return array(
-  'module' => 'mlalbuquerque-2012-12-11'
-);
+  return array(
+    'module' => 'mlalbuquerque-2012-12-11'
+  );
 ```  
 
 ### Simple Doc
