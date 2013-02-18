@@ -17,8 +17,7 @@ Then configure your Server to point to the folder and use it!
 
 ### Contributions
 
-You can increase the number of questions in the `controllers/questions.php` file.
-OR - and this is better - you can create new entire simulation exams!
+You can create new entire simulation exams!
 
 To create new simulation exams, create a new folder in `simulations` folder with this format:
 
@@ -30,6 +29,16 @@ See the example in the package!
 
 So, if you want to make another simulation, just change the file `controller/questions.php` for another one in the `simulations` folder (with the respectives example codes).
 Remember to put your name in the questions file as the new simulation developer.
+
+### Loading simulations
+
+As you seem, questions stay on folder simulations. You can choice which test do. Only write on file `config/loader.php` the folder name, see below: 
+
+```php
+return array(
+  'module' => 'mlalbuquerque-2012-12-11'
+);
+```  
 
 ### Simple Doc
 
@@ -113,6 +122,7 @@ The app will display the questions in the order. Each question is another array 
 
 The example below (inside `controllers/questions.php` file) displays a **choice question**:
 
+```php
     return array(
         array(
             'text'    => 'Which of the following print statements will output the string “correct”?',
@@ -127,6 +137,7 @@ The example below (inside `controllers/questions.php` file) displays a **choice 
             'code'    => true
         )
     );
+```
 
 and returns the following construction:
 
@@ -134,6 +145,7 @@ and returns the following construction:
 
 The example below (inside `controllers/questions.php` file) displays a **multiple choice question**:
 
+```php
     return array(
         array(
             'text'    => 'Which two internal PHP interfaces provide functionality which allow you to treat an object like an array? (Choose 2)',
@@ -143,6 +155,7 @@ The example below (inside `controllers/questions.php` file) displays a **multipl
             )
         )
     );
+```
 
 and returns the following construction:
 
@@ -150,6 +163,7 @@ and returns the following construction:
 
 The example below (inside `controllers/questions.php` file) displays a **direct question**:
 
+```php
     return array(
         array(
             'text'    => 'What the following code will print out?',
@@ -157,6 +171,7 @@ The example below (inside `controllers/questions.php` file) displays a **direct 
             'code'    => true
         )
     );
+```
 
 and returns the following construction:
 
