@@ -1,8 +1,8 @@
 # SZES - A Simple ZCE Exam Simulation
 
 SZES is a simple ZCE Exam Simulation. It is based only in PHP and text files.
-The questions file (`controllers/questions.php`) has the [questions details](#Questions).
-The `data` folder has the [example codes](#Codes) for the questions.
+The questions file (`simulations/simulation1/questions.php`) has the [questions details](#Questions).
+The `simulations/simulation1/codes` folder has the [example codes](#Codes) for the questions.
 This app was developed for and used at the **2012 PHP Conference**.
 
 ### Installation
