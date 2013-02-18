@@ -8,16 +8,16 @@ class Question
     public $id, $type, $text, $answer, $options, $code;
     private $summary;
     
-    public function __construct($id, array $data, $summary)
+    public function __construct($id, array $data, $summary, $path)
     {
-        $questions_path = __DIR__ . '/../../data/';
+        $questions_path = $path;
         $this->id = $id;
         $this->text = $data['text'];
         $this->answer = $data['answer'];
         $this->summary = $summary;
         $this->options = array_key_exists('options', $data) ?
             $data['options'] : null;
-        $this->code = array_key_exists('code', $data) ?
+        $this->code =  (array_key_exists('code', $data) && $data['code']) ?
             file_get_contents($questions_path . 'question' . $id . '.txt') : null;
         $this->type = is_array($this->answer) ?
             'multiple' : ($this->hasOptions() ? 'one' : 'text');
