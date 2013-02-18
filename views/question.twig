@@ -24,7 +24,7 @@
 {% block content %}
 <div id="header">
     <img class="left-float" src="/images/LogoPHPConf7anos.gif" />
-    <h1 class="left-float">Question {{ question_number }}</h1>
+    <h1 class="left-float">Question {{ question_number }} </h1><h5>({{ app.simulation_name }})</h5>
     <span id="summary" class="right-float">Exam Summary</span>
     <span class="right-float">{{ app.session.get('user').name }}</span>
     <button id="close-button" type="button" onclick="window.location.href='/close/exam'">Close Exam</button>

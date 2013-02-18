@@ -28,6 +28,13 @@ body {
         top: 35px;
 }
 
+#header h5 {
+    color: #CCC;
+    font-size: 15px;
+    position: relative;
+        top: 92px;
+}
+
 #header span {
     margin: 10px 30px 20px 0;
 }
