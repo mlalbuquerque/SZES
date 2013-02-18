@@ -27,12 +27,9 @@ Inside this folder, put a PHP file named `questions.php` that contains the quest
 
 See the example in the package!
 
-So, if you want to make another simulation, just change the file `controller/questions.php` for another one in the `simulations` folder (with the respectives example codes).
-Remember to put your name in the questions file as the new simulation developer.
-
 ### Loading simulations
 
-As you seem, questions stay on folder simulations. You can choice which test do. Only write on file `config/loader.php` the folder name, see below: 
+As you saw, questions will stay on folder `simulations`. You can choice which test do. Only write in the file config/loader.php the folder name, see below: 
 
 ```php
 return array(
